@@ -8,12 +8,15 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // import mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/db_mern_staycation", {
-  useNewUrlParser: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose.connect(
+  "mongodb+srv://RadhaSJT:Cadenza97256@cluster0-vrbom.mongodb.net/db_mern_staycation?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  }
+);
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
