@@ -403,7 +403,7 @@ module.exports = {
             res.redirect("/admin/item");
           });
       }
-      await Item.remove();
+      await item.remove();
       req.flash("alertMessage", "Success Delete Item");
       req.flash("alertStatus", "success");
       res.redirect("/admin/item");
